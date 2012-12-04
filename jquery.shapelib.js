@@ -30,18 +30,18 @@ Released under the MIT license.
     {
     
     
-    var total = $(selector).length;
+    var total = jQuery(selector).length;
     var alpha = Math.PI * 2 / total;
            
-    $(selector).each(function(index)
+    jQuery(selector).each(function(index)
     {
         var theta = alpha * index;
         var pointx  =  Math.floor(Math.cos( theta ) * radius);
         var pointy  = Math.floor(Math.sin( theta ) * radius );
 		
 		
-        $(this).css('margin-left', pointx + x + 'px');
-        $(this).css('margin-top', pointy  + y  + 'px');
+        jQuery(this).css('margin-left', pointx + x + 'px');
+        jQuery(this).css('margin-top', pointy  + y  + 'px');
     });
     
    }
@@ -67,14 +67,14 @@ Released under the MIT license.
 
 function drawEllipse(selector, x, y, a, b, angle)
 {
-        var steps = $(selector).length;
+        var steps = jQuery(selector).length;
         
         var i = 0;
         var beta = -angle * (Math.PI / 180);    
         var sinbeta = Math.sin(beta);
         var cosbeta = Math.cos(beta);
         
-        $(selector).each(function(index)
+        jQuery(selector).each(function(index)
         {
         i+= (360/steps);
         var alpha = i * (Math.PI / 180) ;
@@ -87,8 +87,8 @@ function drawEllipse(selector, x, y, a, b, angle)
         X = Math.floor(X);
         Y = Math.floor(Y);
         
-        $(this).css('margin-top', X + 'px');
-        $(this).css('margin-left', Y + 'px');
+        jQuery(this).css('margin-top', X + 'px');
+        jQuery(this).css('margin-left', Y + 'px');
         
         });
         
